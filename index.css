@@ -26,7 +26,7 @@
 }
 .buttonStyle:active {
 	border: thin solid #99CC00;
-	background-color: #F5FFD2;
+	background-color: #17BAAE;
 	color: #669900;
 	cursor: pointer;
 }
