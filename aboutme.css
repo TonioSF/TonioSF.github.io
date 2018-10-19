@@ -1,5 +1,10 @@
-h1{
+header{
     color: #0C6A99;
     font-family: serif;
     font-weight: bold;
+}
+p{
+    font-family: serif;
+    font-weight: bold;
+    color: #0C6A99;
 }
