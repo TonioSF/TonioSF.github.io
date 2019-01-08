@@ -7,6 +7,8 @@
 <head>
 
 <title>Tonio Wu</title>
+
+
 </head>
 
 
@@ -26,13 +28,13 @@
     <a class="nav-link" href="https://tonio-portfolio-toniosf.c9users.io/resume.html">Resume</a>
   </li>
   
-  <div class="dropdown">
-    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Project</button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="https://tonio-portfolio-toniosf.c9users.io/project.html">Art Generator</a>
-      <a class="dropdown-item" href="#">Text Adventure</a>
+    <div class="dropdown">
+      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Project</button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a class="dropdown-item" href="https://tonio-portfolio-toniosf.c9users.io/project.html">Art Generator</a>
+        <a class="dropdown-item" href="#">Text Adventure</a>
+      </div>
     </div>
-  </div>
   
   <li class="nav-item">
     <a class="nav-link" href="#">Contact Me</a>
@@ -45,3 +47,51 @@
 <img src="/IMG_3378[1].JPG" width= 225px height= 300px>
 <img src="/IMG_4115[1].JPG" width= 300px height= 300px>
 
+<body>
+  <button type="button" onclick="document.getElementById('ptext').innerHTML = 'CHINGCHONG'">Click Me</button>
+  <p id="ptext">SUM TING WONG</p>
+  
+  <button type='button' onclick=adder() >adder</button>
+  
+  <button type='button' onclick=newfunction()>New Function</button>
+  
+  <p id="word">Name</p>
+  
+  <p id="newword">something</p>
+  
+  <script>
+  function clkme(){
+    
+    var ptext = document.getElementById('ptext')
+    ptext.innerHTML = 'CHINGCHONG'
+    ptext.style.fontSize = "35px"
+    ptext.style.color = "#008b8b"
+  }
+  
+  function adder(){
+  
+    var x = 3
+    var y = 4
+    var z = x + y
+    var ptext = document.getElementById('ptext')
+    ptext.innerHTML = z
+    alert("this is an alert box")
+  }
+  
+  function newfunction(){
+    var a = 4
+    var b = 6
+    var c = a + b
+    var ptext = document.getElementById('ptext')
+    ptext.innerHTML = c
+    ptext.style.color = "red"
+  }
+  
+  var word = "Tonio" + " " + "Wu"
+  document.getElementById("word").innerHTML = word
+  
+  var newword = "The" + " " + "Crazy" + " " + "Dog"
+  document.getElementById("newword").innerHTML = newword
+  newword.style.color = "blue"
+</script>
+</body>
