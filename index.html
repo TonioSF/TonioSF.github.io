@@ -59,7 +59,60 @@
   
   <p id="newword">something</p>
   
+  <img width = "640 px" height = "360 px" id="graphic" src="/markus.jpg" />
+  
+  <button id="button" type="button" onclick=picChange()>Change Form</button>
+  
+  <p id="name">Robo Jesus</p>
+  
+  <button id="showImg" type ="button" onclick=showImg()>SHOW</button>
+  <button id="hideImg" type ="button" onclick=hideImg()>HIDE</button>
+ 
+
   <script>
+  var state ="robojesus"
+  var pic = document.getElementById("graphic")
+  var button = document.getElementById("button")
+  
+  
+  var button2 = document.createElement("button")
+  var buttonText = document.createTextNode("clicky")
+  button2.appendChild(buttonText)
+  document.body.appendChild(button2)
+  button2.setAttribute("onclick", "picChange()")
+  button2.setAttribute("id", "bubblegum")
+  
+  var buttonA = document.createElement("button")
+  var buttonAdd = document.createTextNode("adder")
+  buttonA.appendChild(buttonAdd)
+  document.body.appendChild(buttonA)
+  buttonA.setAttribute("onclick", "adder()")
+  
+  function hideImg(){
+    pic.style.display = "none"
+  }
+  
+  function showImg(){
+    pic.style.display "block"
+  }
+  
+  function picChange(){
+    if (state == "robojesus"){
+      pic.src = "/wolf.jpg!d"
+      button.innerHTML = "Change Back"
+      state = "wolf"
+      var name = document.getElementById("name")
+      name.innerHTML = "Wolf"
+    }
+    else if (state == "wolf"){
+      pic.src = "/markus.jpg"
+      button.innerHTML = "Change Form"
+      state = "robojesus"
+      var name = document.getElementById("name")
+      name.innerHTML = "Robo Jesus"
+    }
+  }
+  
   function clkme(){
     
     var ptext = document.getElementById('ptext')
@@ -93,5 +146,15 @@
   var newword = "The" + " " + "Crazy" + " " + "Dog"
   document.getElementById("newword").innerHTML = newword
   newword.style.color = "blue"
+  
+  var w = 7
+  
+  if (w > 6){
+    document.getElementById("name").innerHTML = "Hello"
+  }
+  
+  else{
+    document.getElementById("name").innerHTML = "Bye"
+  }
 </script>
 </body>
