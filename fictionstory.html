@@ -125,6 +125,7 @@
     }
     
     function leave(button){
+        state = "leave"
         graphic.src = "/1mechbde-2014-015-158.jpg"
         text.innerHTML = "You knew that your troops at the moment will not stand a chance, you could call for reinforcements but you are too paranoid and left your post and ran into the city to find your family. You found your family but the wall was broken and the enemy was getting closer to where you are. What will you do?"
         b1.innerHTML = "Take them out of the country"
@@ -136,11 +137,13 @@
     }
     
     function stay(button){
+        state = "stay"
         graphic.src = "/military-aim-target-hiding-behind-450w-1229214295.jpg"
         text.innerHTML = "You refused to leave your post and decided to put your duty first"
     }
     
     function takeSterlyn(button){
+        state = "takeSterlyn"
         
     }
     
@@ -150,15 +153,15 @@
     function click(button){
             if (state == "intro"){
                 if (button == 1){
-                    state == "stay"
+                    state = "stay"
                     stay();
                 }
                 else if (button == 2){
-                    state == "leave"
+                    state = "leave"
                     leave();
                 }
                 else if (button == 3){
-                    state == "takeSterlyn"
+                    state = "takeSterlyn"
                     takeSterlyn();
                 }
             }
