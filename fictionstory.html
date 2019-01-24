@@ -78,7 +78,7 @@
             <a class="nav-link" href="https://tonio-portfolio-toniosf.c9users.io/resume.html">Resume</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact Me</a>
+            <a class="nav-link" href="https://tonio-portfolio-toniosf.c9users.io/fictionstory.html">Text Adventure</a>
           </li>
           </div>
         </ul>
@@ -134,13 +134,76 @@
         b4.style.display = "none"
     }
     
+    function hideThem(button){
+        graphic.src = "/baby-and-soldier-daddy-clinging-cute-Knoxville-professional-photography.jpg"
+        text.innerHTML = "You found a safe spot to hide your family. It was close to the base so you ran in and was able to push back the enemy with the rest of the reinforcement."
+        b1.innerHTML = "What happens?"
+        b1.style.display = "block"
+        b2.style.display = "none" 
+        b3.style.display = "none"
+        b4.style.display = "none"
+    }
+    
+    function end1(button){
+        graphic.src = "/header1.jpg"
+        text.innerHTML = "You saved your country! The enemy was pushed out of the wall. you and the other survivors are heroes!"
+        b1.style.display = "none"
+        b2.style.display = "none" 
+        b3.style.display = "none"
+        b4.style.display = "none"
+    }
+    
+    function takeOut(button){
+        graphic.src = "/619-08610120en_Masterfile.jpg"
+        text.innerHTML = "You think that is was best to take your family out of this chaos, out of the walls. You took your family out the other side of the walls, sneaking through."
+        b1.innerHTML = "what happens next?"
+        b1.style.display = "block"
+        b2.style.display = "none"
+        b3.style.display = "none"
+        b4.style.display = "none"
+    }
+    
     function stay(button){
         graphic.src = "/military-aim-target-hiding-behind-450w-1229214295.jpg"
-        text.innerHTML = "You refused to leave your post and decided to put your duty first"
+        text.innerHTML = "You refused to leave your post and decided to put your duty first. The situation got worse at the wall as you cocntinued to fight. The chance of the wall breakin was getting high, what would you do?"
+        b1.innerHTML = "Keep Fighting"
+        b1.style.display = "block"
+        b2.innerHTML = "Leave the fight to find your family"
+        b2.style.display = "block"
+        b3.style.display = "none"
+        b4.style.display = "none"
+    }
+    
+    function keepFighting(button){
+        graphic.src = "/151221_3l9an_rci-m-ortona-bren_sn635.jpg"
+        text.innerHTML = "You still managed to bring yourself to stay and fight. Soon you were told to call in the reinforcements."
+        b1.innerHTML = "what happens?"
+        b1.style.display = "block"
+        b2.style.display = "none"
+        b3.style.display = "none"
+        b4.style.display = "none"
+    }
+    
+    function leaveFinally(button){
+        graphic.src = "/HULC run.jpg"
+        text.innerHTML = "You leave at last second. The enemy broke in through the wall. You found your family but it was too late to take them to hide, the saferooms were locked."
+        b1.innerHTML = "take them out of the country"
+        b1.style.display = "block"
+        b2.innerHTML = "stay and protect your family"
+        b2.style.display = "block"
+        b3.style.display = "none"
+        b4.style.display = "none"
     }
     
     function takeSterlyn(button){
         graphic.src = "/0420-0906-0919-5312_soldiers_running_in_a_field_o.jpg"
+        text.innerHTML = "You are worried about your family, so you and your best frined ran off together to them. With less higher ranks, Sterlyn left Sargeant Fred in charge of defending the wall, which was a bad idea. Fred had started sending out troops to push off the enemy which was just an act of throwing his men away to die. You and Sterlyn had made it to your family but the enemy had already broke into the city. Sterlyn offered to stay behind to buy you time while you take your family to hide."
+        b1.innerHTML = "refuse to leave him and stay and fight"
+        b1.style.display = "block"
+        b2.innerHTML = "Accept the offer"
+        b2.style.display = "block"
+        b3.style.display = "none"
+        b4.style.display = "none"
     }
     
     
@@ -159,6 +222,26 @@
                 else if (button == 3){
                     state = "takeSterlyn";
                     takeSterlyn();
+                }
+            }
+            if (state == "leave"){
+                if (button == 1){
+                    state = "takeOut";
+                    takeOut();
+                }
+                else if (button == 2){
+                    state = "hideThem"
+                    hideThem();
+                }
+            }
+            if (state == "stay"){
+                if (button == 1){
+                    state = "keepFighting"
+                    keepFighting();
+                }
+                else if (button == 2){
+                    state = "leaveFinally"
+                    leaveFinally();
                 }
             }
     }
