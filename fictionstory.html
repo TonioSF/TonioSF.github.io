@@ -163,6 +163,15 @@
         b4.style.display = "none"
     }
     
+    function end2(button){
+        graphic.src = "/BsQ5pBDCYAAcGzg.jpg"
+        text.innerHTML = "It was a dead end. There were enemies waiting to catch any escaping casualties. Your family were shot down and you were captured. Everything fell into enemy rule"
+        b1.style.display = "none"
+        b2.style.display = "none" 
+        b3.style.display = "none"
+        b4.style.display = "none"
+    }
+    
     function stay(button){
         graphic.src = "/military-aim-target-hiding-behind-450w-1229214295.jpg"
         text.innerHTML = "You refused to leave your post and decided to put your duty first. The situation got worse at the wall as you cocntinued to fight. The chance of the wall breakin was getting high, what would you do?"
@@ -195,6 +204,15 @@
         b4.style.display = "none"
     }
     
+    function end3(button){
+        graphic.src = "/BsQ5pBDCYAAcGzg.jpg"
+        text.innerHTML = "You and everyone else were killed...there were too many of the enemies to take and everything fell into enemy rule"
+        b1.style.display = "none"
+        b2.style.display = "none" 
+        b3.style.display = "none"
+        b4.style.display = "none"
+    }
+    
     function takeSterlyn(button){
         graphic.src = "/0420-0906-0919-5312_soldiers_running_in_a_field_o.jpg"
         text.innerHTML = "You are worried about your family, so you and your best frined ran off together to them. With less higher ranks, Sterlyn left Sargeant Fred in charge of defending the wall, which was a bad idea. Fred had started sending out troops to push off the enemy which was just an act of throwing his men away to die. You and Sterlyn had made it to your family but the enemy had already broke into the city. Sterlyn offered to stay behind to buy you time while you take your family to hide."
@@ -202,6 +220,15 @@
         b1.style.display = "block"
         b2.innerHTML = "Accept the offer"
         b2.style.display = "block"
+        b3.style.display = "none"
+        b4.style.display = "none"
+    }
+    
+    function sterlyn(button){
+        graphic.src = "/soldier-giving-respect-to-fallen-comrad-kriss-russell.jpg"
+        text.innerHTML = "You took your family to safety, leaving Sterlyn alone to face the incoming enemy. You managed to get the reinforcement to push out the enemy and sved everyone. You became the hero. Everything was great until you found out that your best frined had died."
+        b1.style.display = "none"
+        b2.style.display = "none" 
         b3.style.display = "none"
         b4.style.display = "none"
     }
@@ -234,6 +261,18 @@
                     hideThem();
                 }
             }
+            if (state == "takeOut"){
+                if (button == 1){
+                    state = "end2"
+                    end2();
+                }
+            }
+            if (state == "hideThem"){
+                if (button == 1){
+                    state = "end1"
+                    end1();
+                }
+            }
             if (state == "stay"){
                 if (button == 1){
                     state = "keepFighting"
@@ -244,6 +283,33 @@
                     leaveFinally();
                 }
             }
+            if (state == "keepFighting"){
+                if (button == 1){
+                    state == "end1"
+                    end1();
+                }
+            }
+            if (state == "leaveFinally"){
+                if (button == 1){
+                    state = "takeOut"
+                    takeOut();
+                }
+                if (button == 2){
+                    state == "end3"
+                    end3();
+                }
+            }
+            if (state == "takeSterlyn"){
+                if (button == 1){
+                    state = "end3"
+                    end3();
+                }
+                if (button == 2){
+                    state = "sterlyn"
+                    sterlyn();
+                }
+            }
+            
     }
     
 </script>
