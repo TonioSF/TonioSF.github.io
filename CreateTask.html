@@ -3,7 +3,7 @@
 <h1>Picture Match!</h1>
 
 <ul>
-<button id="block1"><img src="/Question_Mark-512.png" width = '150 px' height = '200 px'></button>
+<img id = "block1" type = "buton" onclick = changeb1() src="/Question_Mark-512.png" width = '150 px' height = '200 px'>
 <button id="block2"><img src="/Question_Mark-512.png" width = '150 px' height = '200 px'></button>
 <button id="block3"><img src="/Question_Mark-512.png" width = '150 px' height = '200 px'></button>
 </ul>
@@ -19,5 +19,17 @@
 </ul>
 
 <script>
+    var b1 = document.getElementById("block1")
+    var b2 = document.getElementById("block2")
+    var b3 = document.getElementById("block3")
+    var b4 = document.getElementById("block4")
+    var b5 = document.getElementById("block5")
+    var b6 = document.getElementById("block6")
+    var b7 = document.getElementById("block7")
+    var b8 = document.getElementById("block8")
+    var b9 = document.getElementById("block9")
     
+    function changeb1(){
+        b1.src = "/wolf.jpg!d"
+    }
 </script>
