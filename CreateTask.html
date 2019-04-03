@@ -3,7 +3,7 @@
 <h1>Picture Match!</h1>
 
 <ul>
-<img id = "block1" type = "button" onclick = changeb1() src="/Question_Mark-512.png" width = '150 px' height = '200 px'>
+<img id = "block1" type = "button" onclick = changeb1() onclick = matching() src="/Question_Mark-512.png" width = '150 px' height = '200 px'>
 <img id = "block2" type = "button" onclick = changeb2() src="/Question_Mark-512.png" width = '150 px' height = '200 px'>
 <img id = "block3" type = "button" onclick = changeb3() src="/Question_Mark-512.png" width = '150 px' height = '200 px'>
 <img id = "block4" type = "button" onclick = changeb4() src="/Question_Mark-512.png" width = '150 px' height = '200 px'>
@@ -13,7 +13,7 @@
 <img id = "block5" type = "button" onclick = changeb5() src="/Question_Mark-512.png" width = '150 px' height = '200 px'>
 <img id = "block6" type = "button" onclick = changeb6() src="/Question_Mark-512.png" width = '150 px' height = '200 px'>
 <img id = "block7" type = "button" onclick = changeb7() src="/Question_Mark-512.png" width = '150 px' height = '200 px'>
-<img id = "block8" type = "button" onclick = changeb8() src="/Question_Mark-512.png" width = '150 px' height = '200 px'>
+<img id = "block8" type = "button" onclick = changeb8() onclick = matching() src="/Question_Mark-512.png" width = '150 px' height = '200 px'>
 </ul>
 
 <ul>
@@ -56,7 +56,7 @@
     }
     
     function changeb5(){
-        
+        b5.src = "/star-great-job_3.jpg"
     }
     
     function changeb6(){
@@ -84,11 +84,14 @@
     }
     
     function changeb12(){
-        
+        b12.src = "/star-great-job_3.jpg"
     }
     
-    function matching(){
-        
+    function matching(button){
+        if (b1 == "/wolf.jpg!d") if (b8 == "/wolf.jpg!d"){
+            b1.src = "/star-great-job_3.jpg";
+            b8.src = "/star-great-job_3.jpg";
+        }
     }
     
 </script>
